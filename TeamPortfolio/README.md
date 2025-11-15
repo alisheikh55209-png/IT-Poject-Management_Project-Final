@@ -87,3 +87,9 @@ Add or modify projects in the Projects section:
 - Form submission currently shows a success message (backend integration needed for actual email sending)
 - Smooth scrolling works in modern browsers
 - Animations respect `prefers-reduced-motion` for accessibility
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+````
