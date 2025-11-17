@@ -1,8 +1,9 @@
-# Muneeb Ur Rehman
+# Muneeb Ur Rehman (Student ID: 70149177)
 
 **Role:** UI/UX Designer & Frontend Developer
 
 **Email:** muneeb@example.com
+**Contact:** 70149177@uol.pk
 
 **Bio:**
 Creative designer with a keen eye for detail. Expert in creating beautiful interfaces and engaging user experiences. Skilled with Figma, HTML/CSS, JavaScript, and modern front-end frameworks.
