@@ -9,12 +9,14 @@ Portfolio Website
 - Faraz Butt (Developer 3)
 
 ## Abstract
-A short summary of the project, goals and scope.
+This project demonstrates collaborative software development using Git and GitHub workflows. Our team built a modern, responsive portfolio website showcasing DevOps and web development skills. The project emphasizes version control, team collaboration, conflict resolution, and professional documentation practices.
 
 ## Objectives
-- Objective 1
-- Objective 2
-- Objective 3
+- Demonstrate proficiency in Git/GitHub workflows including branching, merging, and pull requests
+- Build a functional portfolio website with modern web technologies
+- Practice team collaboration and conflict resolution in a development environment
+- Create comprehensive documentation and testing procedures
+- Present the project professionally to meet course requirements
 
 ## Features Implemented
 - **Projects Gallery Section** — Displays six project cards (three from team, three from Faraz) with images, titles, descriptions, and technology tags.
@@ -24,8 +26,26 @@ A short summary of the project, goals and scope.
 - **SVG Thumbnails** — Custom, scalable project visuals for DevOps/infrastructure projects.
 
 ## Implementation Details
-- Tech stack: HTML, CSS, JavaScript
-- File structure overview
+- **Tech Stack:** HTML5, CSS3 (Grid/Flexbox), Vanilla JavaScript
+- **Architecture:** Single-page application with modular CSS and JavaScript components
+- **File Structure:**
+  ```
+  TeamPortfolio/
+  ├── index.html (Main HTML file)
+  ├── assets/
+  │   ├── css/
+  │   │   ├── style.css (Main styles)
+  │   │   ├── hero.css (Hero section styles)
+  │   │   └── [other component styles]
+  │   ├── js/
+  │   │   └── script.js (Main JavaScript functionality)
+  │   └── images/
+  │       ├── projects/ (Project thumbnails and SVGs)
+  │       └── [other assets]
+  └── README.md
+  ```
+- **Responsive Design:** Mobile-first approach using CSS Grid and Flexbox
+- **Performance:** Optimized loading animations and lazy loading for images
 
 ## How to run locally
 1. Open `index.html` in a browser
@@ -74,10 +94,18 @@ _Add screenshots here (path or inline images)._
 - **Ali:** "Thanks Muneeb! The faster loading times will improve user experience significantly."
 
 ## Lessons Learned
-- Key takeaways
+- **Git Workflow Mastery:** Learned the importance of proper branching strategies, pull request reviews, and conflict resolution in team environments
+- **Collaborative Development:** Experienced real-world team dynamics, communication, and coordination challenges in software development
+- **Documentation Importance:** Understood the value of comprehensive documentation for project maintenance and knowledge transfer
+- **Performance Optimization:** Discovered the impact of small optimizations on user experience and loading times
+- **Version Control Best Practices:** Gained practical experience with Git commands, commit messages, and repository management
 
 ## References
-- Links, resources, libraries used
+- **GitHub Documentation:** https://docs.github.com/en/get-started
+- **CSS Grid Guide:** https://css-tricks.com/snippets/css/complete-guide-grid/
+- **JavaScript MDN:** https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- **Responsive Design Patterns:** https://developers.google.com/web/fundamentals/design-and-ux/responsive/
+- **SVG Icons:** https://www.flaticon.com/ (for project thumbnails)
 
 ---
 **Last Updated:** November 17, 2025
