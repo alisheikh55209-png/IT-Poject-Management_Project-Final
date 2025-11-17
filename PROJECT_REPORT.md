@@ -40,7 +40,10 @@ _Add screenshots here (path or inline images)._
 |-------------|-----------------|
 | Muhammad Ali Sheikh | e.g., Dashboard, README |
 | Muneeb Ur Rehman | e.g., Skills section |
-| Faraz Butt | e.g., Projects gallery |
+| Faraz Butt | Projects gallery — added three project cards (Scalable CI/CD Pipeline, Cloud Infrastructure Automation, Monitoring & Observability Stack) on Nov 17, 2025. |
+
+## Update Log
+- Nov 17, 2025 — Faraz Butt: Added three project entries to `TeamPortfolio/index.html` and an Activity/Session section so team lead (Ali) and the instructor can see updates and conversation notes.
 
 ## Lessons Learned
 - Key takeaways
@@ -49,4 +52,4 @@ _Add screenshots here (path or inline images)._
 - Links, resources, libraries used
 
 ---
-**Last Updated:** November 15, 2025
+**Last Updated:** November 17, 2025
