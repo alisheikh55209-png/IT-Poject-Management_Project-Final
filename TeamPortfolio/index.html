@@ -12,18 +12,18 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
                     <a href="#home">Team<span>Portfolio</span></a>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
                     <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -51,6 +51,8 @@
         </div>
     </nav>
 
+    <main>
+
     <!-- Home Section -->
     <section id="home" class="home-section">
         <div class="container">
@@ -71,7 +73,7 @@
                 </div>
                 <div class="home-image">
                     <div class="image-wrapper">
-                        <img src="./assets/images/profile/team.png" alt="Our Team" class="profile-img">
+                        <img loading="lazy" src="./assets/images/profile/team.png" alt="Our Team" class="profile-img">
                         <div class="floating-shapes">
                             <div class="shape shape-1"></div>
                             <div class="shape shape-2"></div>
@@ -198,7 +200,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/crypto-screener-cover-image.jpg" alt="Crypto Screener">
+                        <img loading="lazy" src="assets/images/projects/crypto-screener-cover-image.jpg" alt="Crypto Screener">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -224,7 +226,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/portfolio-cover-image.jpg" alt="Portfolio Website">
+                        <img loading="lazy" src="assets/images/projects/portfolio-cover-image.jpg" alt="Portfolio Website">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -250,7 +252,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/agency-website-cover-image.jpg" alt="Agency Website">
+                        <img loading="lazy" src="assets/images/projects/agency-website-cover-image.jpg" alt="Agency Website">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -277,7 +279,7 @@
                 <!-- Faraz: Projects added -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/faraz-ci-cd-realistic.svg" alt="Scalable CI/CD Pipeline">
+                        <img loading="lazy" src="assets/images/projects/faraz-ci-cd-realistic.svg" alt="Scalable CI/CD Pipeline">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -302,7 +304,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/fashion-studio-website.jpg" alt="Cloud Infrastructure Automation">
+                        <img loading="lazy" src="assets/images/projects/fashion-studio-website.jpg" alt="Cloud Infrastructure Automation">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -327,7 +329,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/nft-collection-website-cover-image.jpg" alt="Monitoring & Observability Stack">
+                        <img loading="lazy" src="assets/images/projects/nft-collection-website-cover-image.jpg" alt="Monitoring & Observability Stack">
                         <div class="project-overlay">
                             <a href="#" class="project-link" aria-label="View project">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -362,9 +364,9 @@
                 <p class="section-subtitle">Meet The People Behind The Magic</p>
             </div>
             <div class="team-grid">
-                <div class="team-card">
+                <div class="team-card" data-profile="muneeb-projects.md">
                     <div class="team-image">
-                        <img src="./assets/images/profile/CEO3.jpeg" alt="Muhammad Ali Sheikh">
+                        <img loading="lazy" src="./assets/images/profile/CEO3.jpeg" alt="Muhammad Ali Sheikh">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#" aria-label="GitHub" class="social-link">
@@ -393,7 +395,7 @@
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="./assets/images/profile/munee.jpeg" alt="Muneeb Ur Rehman">
+                        <img loading="lazy" src="./assets/images/profile/munee.jpeg" alt="Muneeb Ur Rehman">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#" aria-label="GitHub" class="social-link">
@@ -422,7 +424,7 @@
                 </div>
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="./assets/images/profile/butt3.jpeg" alt="Faraz Butt">
+                        <img loading="lazy" src="./assets/images/profile/butt3.jpeg" alt="Faraz Butt">
                         <div class="team-overlay">
                             <div class="social-links">
                                 <a href="#" aria-label="GitHub" class="social-link">
@@ -473,6 +475,10 @@
                         <div class="message"><strong>Teacher:</strong> Noted. I can see the updates and will review the work during grading.</div>
                     </div>
                 </div>
+                <div class="activity-item">
+                    <div class="activity-meta">Nov 17, 2025 — Muneeb Ur Rehman</div>
+                    <div class="activity-content">Reviewed responsive layout, added accessibility improvements to the nav and contact form, added lazy-loading to images, and created my profile file. I will finalize animations and polish project descriptions if needed.</div>
+                </div>
             </div>
         </div>
     </section>
@@ -510,22 +516,33 @@
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" aria-label="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" aria-label="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" aria-label="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="contactStatus" role="status" aria-live="polite" style="margin-top:0.75rem;"></div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Project Modal (hidden by default) -->
+    <div id="projectModal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="project-modal-content">
+            <button id="projectModalClose" class="modal-close" aria-label="Close project details">✕</button>
+            <div id="projectModalBody"></div>
+        </div>
+    </div>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
