@@ -5,8 +5,7 @@ Portfolio Website
 
 ## Team
 - Muhammad Ali Sheikh (Team Lead)
-- Muneeb Ur Rehman
-- Faraz Butt
+- Faraz Butt (Developer 1)
 
 ## Abstract
 A short summary of the project, goals and scope.
@@ -43,7 +42,6 @@ _Add screenshots here (path or inline images)._
 | Team Member | Tasks Completed |
 |-------------|------------------|
 | Muhammad Ali Sheikh | Dashboard, Hero section, Team assignment coordination, README updates |
-| Muneeb Ur Rehman | Skills section with animated skill bars, UI/UX refinements |
 | Faraz Butt | **Projects Gallery (Nov 17, 2025):** Added three DevOps/infrastructure project cards with detailed descriptions and custom SVG thumbnails. Created Activity/Session section with team conversation logs. Included: Scalable CI/CD Pipeline (Docker, GitHub Actions, Kubernetes), Cloud Infrastructure Automation (Terraform, AWS, IaC), Monitoring & Observability Stack (Prometheus, Grafana, Loki). |
 
 ## Update Log

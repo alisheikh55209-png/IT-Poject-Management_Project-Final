@@ -2,8 +2,7 @@
 
 ## Team Members
 - **Team Lead:** Muhammad Ali Sheikh (70151489)
-- **Developer 1:** Muneeb Ur Rehman (70149177)
-- **Developer 2:** Faraz Butt (70154218)
+- **Developer 1:** Faraz Butt (70154218)
 
 ## Getting Started
 
@@ -22,8 +21,7 @@ git checkout -b feature-<yourname>
 
 **Examples:**
 - `feature-ali` (Team Lead)
-- `feature-muneeb` (Developer 1)
-- `feature-faraz` (Developer 2)
+- `feature-faraz` (Developer 1)
 
 ### 3. Make Your Changes
 - Work on your assigned component/feature

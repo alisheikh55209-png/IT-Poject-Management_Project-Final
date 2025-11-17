@@ -5,8 +5,7 @@ This is a collaborative team project for IT Project Management course demonstrat
 
 **Team Members:**
 - Muhammad Ali Sheikh (70151489) - **Team Lead**
-- Muneeb Ur Rehman (70149177) - Developer 1
-- Faraz Butt (70154218) - Developer 2
+- Faraz Butt (70154218) - Developer 1
 
 ## 🎯 Project Theme
 **Portfolio Website** - A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase the team's work and skills.
@@ -49,7 +48,6 @@ git checkout -b feature-<yourname>
 ```
 **Examples:**
 - `feature-ali`
-- `feature-muneeb`
 - `feature-faraz`
 
 #### Step 3: Make Your Changes
@@ -97,12 +95,7 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 - README and documentation oversight
 - Status: ✅ Complete
 
-### Muneeb Ur Rehman (70149177) — Developer 1: Skills Section
-- Skills section with animated skill bars
-- UI/UX refinements and styling
-- Status: ✅ Complete
-
-### Faraz Butt (70154218) — Developer 2: Projects Gallery
+### Faraz Butt (70154218) — Developer 1: Projects Gallery
 - **Projects Gallery:** Added 3 DevOps/Infrastructure project cards to showcase:
   - Scalable CI/CD Pipeline (Docker, GitHub Actions, Kubernetes)
   - Cloud Infrastructure Automation (Terraform, AWS, IaC)
@@ -113,6 +106,8 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 - **Branch:** `feature-faraz-projects`
 - **Status:** ✅ Complete — Ready for merge
 - **Last Updated:** November 17, 2025
+
+
 
 ---
 
