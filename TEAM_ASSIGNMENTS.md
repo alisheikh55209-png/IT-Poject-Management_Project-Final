@@ -3,13 +3,19 @@
 This document lists the Phase 3 feature assignments and exact steps each team member should follow.
 
 ## Assignments
-- **Ali (Muhammad Ali Sheikh)** — Dashboard / Hero section
+- **Ali (Muhammad Ali Sheikh)** — Team Lead: Dashboard / Hero section
   - Branch: `feature-ali-dashboard`
   - Tasks: add hero HTML/CSS, navigation, responsive layout
 
-- **Faraz (Faraz Butt)** — Projects gallery
+- **Muneeb** — Developer 2: Skills section
+  - Branch: `feature-muneeb-skills`
+  - Tasks: enhance skills section with animations, add new skill cards, improve UI interactions
+  - Status: ✅ Complete (PR merged)
+
+- **Faraz (Faraz Butt)** — Developer 3: Projects gallery
   - Branch: `feature-faraz-projects`
   - Tasks: add project cards, images, project details modal/links
+  - Status: ✅ Complete (PR merged)
 
 ## Quick Start (copy/paste for each member)
 1. Open PowerShell / Terminal and go to your projects folder:

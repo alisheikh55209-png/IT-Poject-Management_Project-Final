@@ -81,7 +81,7 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav);
 
 // ============================================
-// Animate on Scroll
+// Enhanced Animate on Scroll with Stagger Effects
 // ============================================
 const observerOptions = {
     threshold: 0.1,
@@ -92,21 +92,31 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.transform = 'translateY(0) scale(1)';
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Observe elements for animation with enhanced stagger effects
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.skill-card, .project-card, .team-card, .stat-item');
-    
+    const animateElements = document.querySelectorAll('.skill-card, .project-card, .team-card, .stat-item, .section-header, .about-content, .contact-content');
+
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        el.style.transform = 'translateY(50px) scale(0.95)';
+        el.style.transition = `opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15}s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15}s`;
         observer.observe(el);
     });
+
+    // Add parallax effect to hero section
+    const heroSection = document.querySelector('.home-section');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            heroSection.style.transform = `translateY(${rate}px)`;
+        });
+    }
 });
 
 // ============================================
@@ -161,13 +171,100 @@ skillBars.forEach(bar => {
 });
 
 // ============================================
-// Contact Form Handling
+// Advanced Contact Form Handling with Real-time Validation
 // ============================================
 const contactForm = document.getElementById('contactForm');
+const formInputs = contactForm.querySelectorAll('input, textarea');
+
+// Real-time validation
+formInputs.forEach(input => {
+    input.addEventListener('blur', validateField);
+    input.addEventListener('input', validateField);
+});
+
+function validateField(e) {
+    const field = e.target;
+    const fieldName = field.name;
+    const value = field.value.trim();
+    const errorElement = field.parentElement.querySelector('.field-error');
+
+    let isValid = true;
+    let errorMessage = '';
+
+    switch (fieldName) {
+        case 'name':
+            if (!value) {
+                isValid = false;
+                errorMessage = 'Name is required';
+            } else if (value.length < 2) {
+                isValid = false;
+                errorMessage = 'Name must be at least 2 characters';
+            }
+            break;
+        case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!value) {
+                isValid = false;
+                errorMessage = 'Email is required';
+            } else if (!emailRegex.test(value)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address';
+            }
+            break;
+        case 'subject':
+            if (!value) {
+                isValid = false;
+                errorMessage = 'Subject is required';
+            } else if (value.length < 5) {
+                isValid = false;
+                errorMessage = 'Subject must be at least 5 characters';
+            }
+            break;
+        case 'message':
+            if (!value) {
+                isValid = false;
+                errorMessage = 'Message is required';
+            } else if (value.length < 10) {
+                isValid = false;
+                errorMessage = 'Message must be at least 10 characters';
+            }
+            break;
+    }
+
+    if (!isValid) {
+        field.classList.add('field-error');
+        field.classList.remove('field-success');
+        if (errorElement) {
+            errorElement.textContent = errorMessage;
+            errorElement.style.display = 'block';
+        }
+    } else {
+        field.classList.remove('field-error');
+        field.classList.add('field-success');
+        if (errorElement) {
+            errorElement.style.display = 'none';
+        }
+    }
+
+    return isValid;
+}
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
+    // Validate all fields
+    let isFormValid = true;
+    formInputs.forEach(input => {
+        if (!validateField({ target: input })) {
+            isFormValid = false;
+        }
+    });
+
+    if (!isFormValid) {
+        showNotification('Please correct the errors in the form', 'error');
+        return;
+    }
+
     // Get form values
     const formData = {
         name: document.getElementById('name').value,
@@ -175,33 +272,85 @@ contactForm.addEventListener('submit', (e) => {
         subject: document.getElementById('subject').value,
         message: document.getElementById('message').value
     };
-    
-    // Simple validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-        showNotification('Please fill in all fields', 'error');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-        showNotification('Please enter a valid email address', 'error');
-        return;
-    }
-    
-    // Simulate form submission
+
+    // Simulate form submission with enhanced feedback
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
-    
+
+    // Add loading animation to button
+    submitButton.style.position = 'relative';
+    submitButton.innerHTML = `
+        <span style="opacity: 0;">Sending...</span>
+        <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+    `;
+
     // Simulate API call
     setTimeout(() => {
         showNotification('Thank you! Your message has been sent successfully.', 'success');
         contactForm.reset();
-        submitButton.textContent = originalText;
+
+        // Reset field states
+        formInputs.forEach(input => {
+            input.classList.remove('field-error', 'field-success');
+            const errorElement = input.parentElement.querySelector('.field-error');
+            if (errorElement) {
+                errorElement.style.display = 'none';
+            }
+        });
+
+        submitButton.innerHTML = originalText;
         submitButton.disabled = false;
-    }, 1500);
+    }, 2000);
+});
+
+// Add validation styles
+const validationStyle = document.createElement('style');
+validationStyle.textContent = `
+    .field-error {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+
+    .field-success {
+        border-color: #10b981 !important;
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1) !important;
+    }
+
+    .field-error-message {
+        color: #ef4444;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
+    }
+
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+`;
+document.head.appendChild(validationStyle);
+
+// Add error message elements to form fields
+document.addEventListener('DOMContentLoaded', () => {
+    const formFields = contactForm.querySelectorAll('.form-group');
+    formFields.forEach(field => {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'field-error-message';
+        field.appendChild(errorDiv);
+    });
 });
 
 // ============================================
@@ -332,15 +481,177 @@ function createScrollToTopButton() {
 createScrollToTopButton();
 
 // ============================================
-// Page Load Animation
+// Loading Screen Animation
 // ============================================
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
+function createLoadingScreen() {
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading-screen';
+    loadingScreen.innerHTML = `
+        <div class="loading-container">
+            <div class="loading-logo">
+                <span class="logo-text">Team<span>Portfolio</span></span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+            <div class="loading-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(loadingScreen);
+
+    // Add loading screen styles
+    const style = document.createElement('style');
+    style.textContent = `
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-container {
+            text-align: center;
+            color: white;
+        }
+
+        .loading-logo {
+            margin-bottom: 2rem;
+        }
+
+        .logo-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: logoPulse 2s ease-in-out infinite;
+        }
+
+        .logo-text span {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .loading-progress {
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fff, #e0e7ff);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .loading-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: particleFloat 3s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+        .particle:nth-child(3) { top: 40%; left: 60%; animation-delay: 2s; }
+        .particle:nth-child(4) { top: 80%; left: 30%; animation-delay: 0.5s; }
+        .particle:nth-child(5) { top: 10%; left: 90%; animation-delay: 1.5s; }
+
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes particleFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    return loadingScreen;
+}
+
+function animateLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressFill = loadingScreen.querySelector('.progress-fill');
+    const progressText = loadingScreen.querySelector('.progress-text');
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+                setTimeout(() => {
+                    loadingScreen.remove();
+                }, 500);
+            }, 500);
+        }
+
+        progressFill.style.width = progress + '%';
+        progressText.textContent = Math.floor(progress) + '%';
     }, 100);
-});
+}
+
+// Initialize loading screen
+const loadingScreen = createLoadingScreen();
+animateLoadingScreen();
 
 // ============================================
 // Lazy Loading Images (Performance Enhancement)
@@ -405,6 +716,166 @@ updateToggleIcon(currentTheme);
 
 // Add event listener to toggle button
 darkModeToggle.addEventListener('click', toggleTheme);
+
+// ============================================
+// Particle Background Effect for Hero Section
+// ============================================
+function createParticleBackground() {
+    const heroSection = document.querySelector('.home-section');
+    if (!heroSection) return;
+
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'particle-background';
+    particleContainer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+    `;
+
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'hero-particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 6 + 2}px;
+            height: ${Math.random() * 6 + 2}px;
+            background: rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1});
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: particleFloat ${Math.random() * 10 + 10}s linear infinite;
+            animation-delay: ${Math.random() * 10}s;
+        `;
+        particleContainer.appendChild(particle);
+    }
+
+    heroSection.style.position = 'relative';
+    heroSection.insertBefore(particleContainer, heroSection.firstChild);
+
+    // Add particle animation styles
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hero-particle:nth-child(odd) {
+            animation-direction: reverse;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Initialize particle background
+createParticleBackground();
+
+// ============================================
+// Smooth Page Transitions
+// ============================================
+function createPageTransition() {
+    // Add transition styles
+    const transitionStyle = document.createElement('style');
+    transitionStyle.textContent = `
+        .page-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 10000;
+            transform: translateX(-100%);
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .page-transition.active {
+            transform: translateX(0);
+        }
+
+        .page-transition.fade-out {
+            transform: translateX(100%);
+        }
+
+        .section-transition {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section-transition.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    `;
+    document.head.appendChild(transitionStyle);
+
+    // Create transition overlay
+    const transitionOverlay = document.createElement('div');
+    transitionOverlay.className = 'page-transition';
+    document.body.appendChild(transitionOverlay);
+
+    // Enhanced smooth scrolling with transitions
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+
+            if (target) {
+                // Start transition
+                transitionOverlay.classList.add('active');
+
+                setTimeout(() => {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+
+                    // End transition
+                    setTimeout(() => {
+                        transitionOverlay.classList.add('fade-out');
+                        setTimeout(() => {
+                            transitionOverlay.classList.remove('active', 'fade-out');
+                        }, 600);
+                    }, 300);
+                }, 300);
+            }
+        });
+    });
+
+    // Add section transition effects
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-transition', 'active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
+
+// Initialize page transitions
+createPageTransition();
 
 // ============================================
 // Console Welcome Message

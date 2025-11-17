@@ -5,7 +5,8 @@ This is a collaborative team project for IT Project Management course demonstrat
 
 **Team Members:**
 - Muhammad Ali Sheikh (70151489) - **Team Lead**
-- Faraz Butt (70154218) - Developer 1
+- Muneeb - Developer 2
+- Faraz Butt (70154218) - Developer 3
 
 ## 🎯 Project Theme
 **Portfolio Website** - A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase the team's work and skills.
@@ -82,7 +83,7 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 |-------|--------|-------------|
 | Phase 1: Setup & Planning | ✅ Complete | Repository with README, License, team defined |
 | Phase 2: Cloning & Branching | ✅ Complete | All members created branches and pushed updates |
-| Phase 3: Project Development | ⏳ In Progress | Feature branches with functionality (Faraz projects complete) |
+| Phase 3: Project Development | ✅ Complete | Feature branches with functionality (All PRs merged: Muneeb skills, Faraz projects) |
 | Phase 4: Conflict Resolution | ⏹️ Pending | Merge conflict resolved & documented |
 | Phase 5: Documentation & Testing | ⏹️ Pending | PROJECT_REPORT.md & final code |
 | Phase 6: Presentation & Submission | ⏹️ Pending | GitHub link + presentation slides |
@@ -95,7 +96,14 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 - README and documentation oversight
 - Status: ✅ Complete
 
-### Faraz Butt (70154218) — Developer 1: Projects Gallery
+### Muneeb — Developer 2: Skills Section
+- Enhanced Skills section with additional technologies and improved UI animations
+- Added interactive skill bars and hover effects
+- Branch: `feature-muneeb-skills`
+- Status: ✅ Complete (PR merged)
+- Last Updated: November 17, 2025
+
+### Faraz Butt (70154218) — Developer 3: Projects Gallery
 - **Projects Gallery:** Added 3 DevOps/Infrastructure project cards to showcase:
   - Scalable CI/CD Pipeline (Docker, GitHub Actions, Kubernetes)
   - Cloud Infrastructure Automation (Terraform, AWS, IaC)
@@ -142,4 +150,4 @@ Contact the team lead: Muhammad Ali Sheikh (70151489)
 
 ---
 **Last Updated:** November 17, 2025  
-**Status:** 🟡 Phase 3 - Project Development (Faraz Projects Complete)
+**Status:** 🟢 Phase 3 - Project Development Complete (All PRs Merged)

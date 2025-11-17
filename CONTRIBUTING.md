@@ -2,7 +2,8 @@
 
 ## Team Members
 - **Team Lead:** Muhammad Ali Sheikh (70151489)
-- **Developer 1:** Faraz Butt (70154218)
+- **Developer 2:** Muneeb
+- **Developer 3:** Faraz Butt (70154218)
 
 ## Getting Started
 

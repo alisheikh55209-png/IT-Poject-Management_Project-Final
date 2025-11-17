@@ -3,12 +3,12 @@
 ## Team Lead Assessment
 **Date:** November 17, 2025
 **Team Lead:** Muhammad Ali Sheikh (70151489)
-**Status:** Phase 3 Complete - Faraz's Work Merged
+**Status:** Phase 3 Complete - All PRs Merged (Muneeb Skills, Faraz Projects)
 
 ## Current Progress Summary
 - **Phase 1 (Setup & Planning)**: ✅ **Fully Complete** - Repository created, team defined, README, CONTRIBUTING.md, LICENSE, and basic structure in place.
 - **Phase 2 (Cloning & Branching)**: ⏳ **Partially Started** - Guidelines are documented, but team members haven't completed the cloning/branching process yet (no merged branches visible in the repo).
-- **Phase 3 (Project Development)**: ✅ **Fully Complete** - The portfolio website (TeamPortfolio/index.html) is fully built with all sections (Home, About, Projects, Team, Contact). Ali's hero/dashboard enhancement and Faraz's projects section have been successfully implemented and merged into main branch.
+- **Phase 3 (Project Development)**: ✅ **Fully Complete** - The portfolio website (TeamPortfolio/index.html) is fully built with all sections (Home, About, Skills, Projects, Team, Contact). Ali's hero/dashboard enhancement, Muneeb's skills section, and Faraz's projects section have been successfully implemented and merged into main branch.
 - **Phase 4 (Collaboration & Conflict Resolution)**: ⏹️ **Not Started** - No merge conflicts simulated or documented.
 - **Phase 5 (Documentation & Testing)**: ⏹️ **Not Started** - PROJECT_REPORT.md is a template; needs filling with details, screenshots, and testing.
 - **Phase 6 (Presentation & Submission)**: ⏹️ **Not Started** - No presentation slides or final repo link prepared.
@@ -35,7 +35,7 @@ Follow these sequential steps to guide your team through the remaining phases. S
 ### Step 2: Oversee Phase 3 (Project Development) - Priority: High
    - **Why?** This simulates feature development; even though the site is built, have members "contribute" by modifying sections or adding content.
    - **Your Actions**:
-     1. Assign tasks as per TEAM_ASSIGNMENTS.md (Ali: Hero/Dashboard, Faraz: Projects).
+     1. Assign tasks as per TEAM_ASSIGNMENTS.md (Ali: Hero/Dashboard, Muneeb: Skills, Faraz: Projects).
      2. Have members work on their branches: Edit TeamPortfolio/index.html or CSS/JS files to add/improve their sections (e.g., Faraz updates project cards).
      3. They commit, push, and submit PRs.
      4. Review PRs, provide feedback, and merge.

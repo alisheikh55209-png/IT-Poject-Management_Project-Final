@@ -5,7 +5,8 @@ Portfolio Website
 
 ## Team
 - Muhammad Ali Sheikh (Team Lead)
-- Faraz Butt (Developer 1)
+- Muneeb (Developer 2)
+- Faraz Butt (Developer 3)
 
 ## Abstract
 A short summary of the project, goals and scope.
@@ -42,9 +43,12 @@ _Add screenshots here (path or inline images)._
 | Team Member | Tasks Completed |
 |-------------|------------------|
 | Muhammad Ali Sheikh | Dashboard, Hero section, Team assignment coordination, README updates |
+| Muneeb | **Skills Section (Nov 17, 2025):** Enhanced Skills section with additional technologies and improved UI animations. Added interactive skill bars and hover effects. Branch: `feature-muneeb-skills` - PR merged. |
 | Faraz Butt | **Projects Gallery (Nov 17, 2025):** Added three DevOps/infrastructure project cards with detailed descriptions and custom SVG thumbnails. Created Activity/Session section with team conversation logs. Included: Scalable CI/CD Pipeline (Docker, GitHub Actions, Kubernetes), Cloud Infrastructure Automation (Terraform, AWS, IaC), Monitoring & Observability Stack (Prometheus, Grafana, Loki). |
 
 ## Update Log
+- Nov 17, 2025 10:00 — Muneeb: Submitted PR for Skills section enhancements with animations and interactive elements.
+- Nov 17, 2025 10:30 — Ali: Reviewed and merged Muneeb's PR (`feature-muneeb-skills`) - Skills section complete.
 - Nov 17, 2025 14:30 — Faraz Butt: Added three project cards to Projects gallery with polished descriptions and tags.
 - Nov 17, 2025 14:35 — Faraz Butt: Created Activity/Session section with team conversation thread (Ali, Faraz, Teacher) for visibility.
 - Nov 17, 2025 14:40 — Faraz Butt: Added CSS styling for Activity section (responsive, dark mode compatible).
@@ -52,6 +56,18 @@ _Add screenshots here (path or inline images)._
 - Nov 17, 2025 14:50 — Faraz Butt: Created high-fidelity SVG placeholder for Scalable CI/CD Pipeline with pipeline visualization (Build → Test → Package → Deploy).
 - Nov 17, 2025 15:00 — Faraz Butt: Finalized project thumbnails and committed all changes to branch `feature-faraz-projects`.
 - **Branch:** `feature-faraz-projects` | **Status:** Ready for Pull Request review.
+
+## Team Conversation Logs
+**Pull Request Acceptance - Muneeb's Skills Section:**
+
+- **Muneeb:** "Hi Ali, I've completed the Skills section enhancements. Added new skill cards, improved animations, and interactive hover effects. PR is ready for review."
+- **Ali:** "Great work Muneeb! Let me review the changes. The animations look smooth and the new skill cards fit well with the design."
+- **Ali:** "Approved! Merging your PR now. Skills section is complete."
+- **Muneeb:** "Thanks Ali! Glad to contribute to the team portfolio."
+
+**Faraz's Work Completion:**
+- **Faraz:** "Ali, my projects gallery is ready. Added three DevOps projects with custom SVGs and the activity section for transparency."
+- **Ali:** "Excellent Faraz! The projects look professional and the activity section will be great for the instructor to see our progress."
 
 ## Lessons Learned
 - Key takeaways
