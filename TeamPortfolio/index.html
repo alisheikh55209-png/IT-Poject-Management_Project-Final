@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="./assets/images/profile/team.png">
+    <link rel="preload" as="image" href="./assets/images/profile/CEO3.jpeg">
 </head>
 <body>
     <!-- Navigation -->
@@ -580,6 +583,39 @@
             </div>
         </div>
     </footer>
+
+    <!-- Optimized Image Loader -->
+    <script>
+        // Fast image loading with native lazy loading + IntersectionObserver
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[data-src]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.getAttribute('data-src');
+                            if (src) {
+                                img.src = src;
+                                img.removeAttribute('data-src');
+                                img.style.objectFit = 'cover';
+                            }
+                            observer.unobserve(img);
+                        }
+                    });
+                }, { rootMargin: '50px' });
+                
+                images.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for older browsers
+                images.forEach(img => {
+                    const src = img.getAttribute('data-src');
+                    if (src) img.src = src;
+                });
+            }
+        });
+    </script>
 
     <script src="assets/js/script.js"></script>
 </body>
