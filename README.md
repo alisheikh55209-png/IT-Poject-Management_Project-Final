@@ -49,6 +49,7 @@ git checkout -b feature-<yourname>
 ```
 **Examples:**
 - `feature-ali`
+- `feature-muneeb`
 - `feature-faraz`
 
 #### Step 3: Make Your Changes
@@ -84,7 +85,7 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 | Phase 1: Setup & Planning | ✅ Complete | Repository with README, License, team defined |
 | Phase 2: Cloning & Branching | ✅ Complete | All members created branches and pushed updates |
 | Phase 3: Project Development | ✅ Complete | Feature branches with functionality (All PRs merged: Muneeb skills, Faraz projects) |
-| Phase 4: Conflict Resolution | ⏹️ Pending | Merge conflict resolved & documented |
+| Phase 4: Conflict Resolution | ✅ Complete | Merge conflict simulated, resolved & documented |
 | Phase 5: Documentation & Testing | ⏹️ Pending | PROJECT_REPORT.md & final code |
 | Phase 6: Presentation & Submission | ⏹️ Pending | GitHub link + presentation slides |
 
@@ -96,7 +97,7 @@ See **[CONTRIBUTING.md](./CONTRIBUTING.md)** for:
 - README and documentation oversight
 - Status: ✅ Complete
 
-### Muneeb — Developer 2: Skills Section
+### Muneeb Ur Rehman (70149177) — Developer 2: Skills Section
 - Enhanced Skills section with additional technologies and improved UI animations
 - Added interactive skill bars and hover effects
 - Branch: `feature-muneeb-skills`

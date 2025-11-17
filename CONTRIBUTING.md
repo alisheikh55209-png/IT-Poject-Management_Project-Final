@@ -22,7 +22,8 @@ git checkout -b feature-<yourname>
 
 **Examples:**
 - `feature-ali` (Team Lead)
-- `feature-faraz` (Developer 1)
+- `feature-muneeb` (Developer 2)
+- `feature-faraz` (Developer 3)
 
 ### 3. Make Your Changes
 - Work on your assigned component/feature
@@ -61,6 +62,33 @@ git push origin feature-<yourname>
 7. **Merge** → Once approved, merge into `main`
 
 ## Handling Merge Conflicts
+
+### Simulated Conflict Resolution (Phase 4 - November 17, 2025)
+
+**Conflict Scenario:** Two team members (Muneeb and Faraz) simultaneously modified the same section in README.md, creating a merge conflict.
+
+**Steps Taken:**
+1. **Created conflict scenario:**
+   - Muneeb (Developer 2) added content to team contributions section
+   - Faraz (Developer 3) added different content to same section
+   - Both pushed changes to their respective branches
+
+2. **Resolved conflict:**
+   - Used VS Code merge conflict editor to review differences
+   - Combined both contributions appropriately
+   - Removed conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+   - Committed the resolved changes
+
+3. **Documented resolution:**
+   - Added conflict resolution details to this section
+   - Updated project status to Phase 4 Complete
+   - Marked collaboration & conflict resolution as demonstrated
+
+**Outcome:** Successfully resolved merge conflict, demonstrating Git collaboration skills. All team contributions preserved and properly documented.
+
+---
+
+### General Conflict Resolution Steps
 
 If a conflict occurs:
 
