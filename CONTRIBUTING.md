@@ -131,11 +131,11 @@ Before submitting a PR, ensure:
 
 ## Project Phases
 1. **Phase 1:** Repository setup ✅
-2. **Phase 2:** Cloning & creating branches ✅
-3. **Phase 3:** Development with assigned features ✅
-4. **Phase 4:** Conflict resolution practice ✅
-5. **Phase 5:** Final documentation ✅
-6. **Phase 6:** Presentation to class ✅
+2. **Phase 2:** Cloning & creating branches
+3. **Phase 3:** Development with assigned features
+4. **Phase 4:** Conflict resolution practice
+5. **Phase 5:** Final documentation
+6. **Phase 6:** Presentation to class
 
 ## Deployment Status
 - **TeamPortfolio Project:** Successfully deployed to GitHub with Next.js setup
