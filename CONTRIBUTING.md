@@ -130,12 +130,12 @@ Before submitting a PR, ensure:
 - Notify team lead when PR is ready for review
 
 ## Project Phases
-1. **Phase 1:** Repository setup ✅
-2. **Phase 2:** Cloning & creating branches
-3. **Phase 3:** Development with assigned features
-4. **Phase 4:** Conflict resolution practice
-5. **Phase 5:** Final documentation
-6. **Phase 6:** Presentation to class
+1. **Phase 1:** Repository setup 
+2. **Phase 2:** Cloning & creating branches 
+3. **Phase 3:** Development with assigned features 
+4. **Phase 4:** Conflict resolution practice 
+5. **Phase 5:** Final documentation 
+6. **Phase 6:** Presentation to class 
 
 ## Questions?
 Contact the team lead (Muhammad Ali Sheikh) via GitHub or direct message.
